@@ -1,8 +1,15 @@
 import cv2
+import argparse
 
 
 
-class Cartoonizer:
+parser = argparse.ArgumentParser(description= 'Cartoonizing an image')
+parser.add_argument('image', help= 'Image which is going to be cartoonize')
+args = parser.parse_args()
+
+
+
+class Cartoonizer():
 	"""Cartoonizer effect
 		A class that applies a cartoon effect to an image.
 
@@ -58,7 +65,7 @@ if  __name__ == '__main__':
 
 	#Add an image to render function as input
 	cartoon = Cartoonizer()
-	cartoon_image = cartoon.render("pexels.jpg")
+	cartoon_image = cartoon.render(args.image)
 
 	cv2.imwrite("cartoon_image.png", cartoon_image)
 	cv2.imshow("cartoon_image", cartoon_image)

@@ -19,6 +19,14 @@ To convert an image to cartoons, run the following command to run it:
  5. Detect  edges
  - adaptiveThreshold
  6. Again converting back to RGB format
+ 
+ 
+#### Running in terminal
+
+To convert an image to cartoons, you only have to replace **dog_image.jpg** in following command, with your image and then run the command in terminal : 
+
+	$ python image_cartoonizer.py dog_image.jpg 
+ 
 
 
 ## Required packages
