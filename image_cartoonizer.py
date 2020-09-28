@@ -17,8 +17,8 @@ class Cartoonizer():
 	def __init__(self):
 		pass
 
-	def render(self, img_rgb):
-		img_bgr = cv2.imread(img_rgb)
+	def render(self, img):
+		img_bgr = cv2.imread(img)
 		img_bgr = cv2.resize(img_bgr, (640,740))
 
 		num_iter_bilateral = 5 #bilateral filtering steps
@@ -45,12 +45,10 @@ class Cartoonizer():
 										cv2.ADAPTIVE_THRESH_MEAN_C,
 										cv2.THRESH_BINARY, blockSize= 9, C = 2)
 
-		# Again converting back to RGB format
+		# Again converting back to BGR format
 
 		img_edge = cv2.cvtColor(img_edge, cv2.COLOR_GRAY2BGR)
-		# cv2.imwrite("edge.png",img_edge)
-		# cv2.imshow("edge RGB", img_edge)
-		# cv2.waitKey(0)
+
 
 		return cv2.bitwise_and(img_color, img_edge)
 
