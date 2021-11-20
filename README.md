@@ -54,3 +54,10 @@ To convert an image to cartoons, you only have to replace **dog_image.jpg** in f
 ### Step 3
 
 -   🔃 Create a merge request
+
+
+## Sample
+
+The following figure shows the project steps on an image :
+
+![plot](https://github.com/aliaminibagh/image-cartoonizing/blob/master/Cartoonization2.png)
