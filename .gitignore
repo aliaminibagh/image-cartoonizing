@@ -2,5 +2,6 @@
 *.idea
 *.png
 *.jpg
+*.jpeg
 *.mypy_cache*
 
