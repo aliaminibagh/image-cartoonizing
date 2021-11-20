@@ -1,5 +1,6 @@
 *__pycache__*
 *.idea
 *.png
+*.jpg
 *.mypy_cache*
 
